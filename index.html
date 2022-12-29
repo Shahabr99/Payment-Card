@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700;800&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="card-section">
+      <div class="front-card">
+        <div class="upper-part">
+          <img src="images/card-logo.svg" alt="" />
+        </div>
+        <div class="card-info">
+          <div class="card-number">0000 0000 0000 0000</div>
+          <div class="card-holder">
+            <p class="user">Jane Appleseed</p>
+            <p><span class="month">00</span>/<span class="year">00</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-card">
+        <p class="code">000</p>
+      </div>
+
+      <div class="register-card">
+        <form class="card-form" method="POST" action="#">
+          <label class="card-name" for="name"
+            >Cardholder Name:
+            <input
+              type="text"
+              name="name"
+              class="name"
+              id="name"
+              size="30"
+              maxlength="30"
+              placeholder="e.g. Jane Appleseed"
+            />
+          </label>
+
+          <label class="card-digits" for="card"
+            >Card Number
+            <input
+              type="text"
+              id="card"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <span class="error1">Wrong format, numbers only</span>
+          </label>
+
+          <label class="exp-date" for=""
+            >Exp.date(mm/yy)
+            <div>
+              <input
+                class="exp"
+                id="expmonth"
+                type="text"
+                size="3"
+                maxlength="2"
+                placeholder="MM"
+              />
+
+              <input
+                class="exp"
+                id="expyear"
+                type="text"
+                size="3"
+                maxlength="2"
+                placeholder="YY"
+              />
+            </div>
+            <span class="error2">can't be blank</span>
+          </label>
+
+          <label class="cvc-card" for="cvc"
+            >cvc
+            <input
+              type="text"
+              id="cvc"
+              size="7"
+              maxlength="3"
+              placeholder="e.g. 123"
+            />
+            <span class="error3">Can't be blank</span>
+          </label>
+
+          <button type="submit" class="submit-btn">Confirm</button>
+        </form>
+        <div class="confirmed-card">
+          <img src="images/icon-complete.svg" alt="" width="80px" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
